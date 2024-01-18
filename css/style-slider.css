@@ -1,0 +1,130 @@
+
+.list{
+    display: flex; /* makes motion horizontal*/
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    z-index: 1;
+}
+@keyframes slideAnimation {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
+
+}
+.list input{
+    display: none;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+} /* Hide scrollbar for Chrome, Safari and Opera */
+.containerforimage {
+    position: relative;
+    text-align: center;
+    color: white;
+    object-fit: cover;
+    transition: 2s;
+
+}
+.containerforimage img {
+    flex: 1 0 100%;
+    scroll-snap-align: center;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.centered {
+    position: absolute;
+    font-family: regular;
+    text-decoration: none;
+    font-size: 6em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.navigation-man {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.manuel-btn{
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.manuel-btn:hover {
+    background-color: #ffffff;
+}
+#r1:checked ~ .first{
+    margin-left: 0%;
+}
+#r2:checked ~ .first{
+    margin-left: -100%;
+}
+#r3:checked ~ .first{
+    margin-left: -200%;
+}
+#r4:checked ~ .first{
+    margin-left: -300%;
+}
+.navigation-auto{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.navigation-auto div{
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 2px solid #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 1s;
+}
+#r1:checked ~ .navigation-auto .auto-btn1{
+    background: #ffffff;
+}
+#r2:checked ~ .navigation-auto .auto-btn2{
+    background: #ffffff;
+}
+#r3:checked ~ .navigation-auto .auto-btn3{
+     background: #ffffff;
+ }
+#r4:checked ~ .navigation-auto .auto-btn4{
+    background: #ffffff;
+}
+@media all and (max-width: 950px){
+    .centered{
+        font-size: 11vw;
+    }
+}

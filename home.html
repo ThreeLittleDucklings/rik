@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style-menu.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-slider.css"/>
+</head>
+<body>
+<header>
+    <h1 class="logo">RIK M.</h1>
+<ul class="navigation">
+
+    <li><a href="home.html">home</a></li>
+    <li><a href="portfolio.html">portfolio</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+</header>
+<section class="container">
+
+    <div class="slider">
+        <div class="list">
+            <input type="radio" name="radio-btn" id="r1">
+            <input type="radio" name="radio-btn" id="r2">
+            <input type="radio" name="radio-btn" id="r3">
+            <input type="radio" name="radio-btn" id="r4">
+
+            <div class="containerforimage first"><img id="slide-1" src="images/people/meg1.jpg" alt="people" />
+                <div class="centered" ><a href="contact.html">PEOPLE</a></div>
+            </div>
+            <div class="containerforimage "><img id="slide-2" src="images/nacht/meg6.png" alt="urban" />
+                <div class="centered" ><a href="contact.html">URBAN</a></div>
+            </div>
+            <div class="containerforimage "><img id="slide-3" src="images/architecture/meg4.png" alt="architecture" />
+            <div class="centered" ><a href="contact.html">ARCHITECTURE</a></div>
+            </div>
+            <div class="containerforimage "><img id="slide-4" src="images/Studio/meg33.png" alt="studio" />
+                <div class="centered" ><a href="contact.html">STUDIO</a></div>
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+
+        </div>
+        <div class="navigation-man">
+            <label for="r1" class="manuel-btn"></label>
+            <label for="r2" class="manuel-btn"></label>
+            <label for="r3" class="manuel-btn"></label>
+            <label for="r4" class="manuel-btn"></label>
+
+
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    var counter = 1;
+    var intervalId;
+
+    function startAutoSlide() {
+        intervalId = setInterval(function () {
+            document.getElementById('r' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 4000);
+    }
+
+    function pauseAutoSlide() {
+        clearInterval(intervalId);
+    }
+
+    // Initial start
+    startAutoSlide();
+
+    // Pause on mouseover
+    document.querySelectorAll('.centered').forEach(function (element) {
+        element.addEventListener('mouseover', pauseAutoSlide);
+    });
+
+    // Resume on mouseout
+    document.querySelectorAll('.centered').forEach(function (element) {
+        element.addEventListener('mouseout', startAutoSlide);
+    });
+</script>
+</body>
+</html>
+

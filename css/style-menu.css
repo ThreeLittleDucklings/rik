@@ -1,0 +1,98 @@
+
+*{
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background: none;
+
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+}
+.logo{
+    font-family: bold;
+    color: #AEAE9D;
+    font-size: 3em;
+    margin-right: auto;
+
+}
+
+body {
+    background-color: #f8fafc;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+li, a {
+    text-decoration: none;
+    color: white;
+
+}
+.navigation {
+    list-style: none;
+}
+.navigation li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.navigation li a {
+    transition: all 0.3s ease 0s;
+    background: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    font-family: text;
+}
+.navigation li a:hover {
+    color: #8C8C73;
+}
+
+@media all and (max-width: 950px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        order: -1; /* Moves the logo to the top */
+        margin-bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .navigation li {
+        margin: 10px 0; /* Adjust as needed */
+    }
+
+}
+
+
+@font-face {
+    font-family: bold;
+    src: url(../fonts/GeneralSans-Bold.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(../fonts/GeneralSans-Regular.ttf);
+}
+@font-face {
+    font-family: text;
+    src: url(../fonts/CabinetGrotesk-Medium.ttf);
+}
