@@ -1,0 +1,12 @@
+@font-face {
+    font-family: bold;
+    src: url(../fonts/GeneralSans-Bold.ttf);
+}
+@font-face {
+    font-family: regular;
+    src: url(../fonts/GeneralSans-Regular.ttf);
+}
+@font-face {
+    font-family: text;
+    src: url(../fonts/CabinetGrotesk-Medium.ttf);
+}

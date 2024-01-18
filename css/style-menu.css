@@ -56,7 +56,7 @@ li, a {
     color: #8C8C73;
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-aspect-ratio: 1/1) {
     header {
         flex-direction: column;
         align-items: center;
@@ -68,6 +68,7 @@ li, a {
         text-align: center;
         margin: 0 auto;
     }
+
 
     .navigation {
         display: flex;
@@ -82,17 +83,13 @@ li, a {
     }
 
 }
+@media all and (max-aspect-ratio: 2/3) {
+    .navigation li a{
+        font-size: 7vw;
+    }
+    .logo{
+        font-size: 11vw;
+    }
 
+}
 
-@font-face {
-    font-family: bold;
-    src: url(../fonts/GeneralSans-Bold.ttf);
-}
-@font-face {
-    font-family: regular;
-    src: url(../fonts/GeneralSans-Regular.ttf);
-}
-@font-face {
-    font-family: text;
-    src: url(../fonts/CabinetGrotesk-Medium.ttf);
-}
