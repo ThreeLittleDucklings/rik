@@ -1,4 +1,10 @@
+body {
+    background-color: #F5F2ED;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 
+}
 .list{
     display: flex; /* makes motion horizontal*/
     overflow-x: hidden;
