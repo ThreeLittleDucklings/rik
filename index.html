@@ -65,12 +65,16 @@
     var intervalId;
 
     function startAutoSlide() {
+        // Set the first slide immediately
+        document.getElementById('r' + counter).checked = true;
+
+        // Set up the interval for the subsequent slides
         intervalId = setInterval(function () {
-            document.getElementById('r' + counter).checked = true;
             counter++;
             if (counter > 4) {
                 counter = 1;
             }
+            document.getElementById('r' + counter).checked = true;
         }, 4000);
     }
 
@@ -91,6 +95,7 @@
         element.addEventListener('mouseout', startAutoSlide);
     });
 </script>
+
 </body>
 </html>
 
