@@ -120,7 +120,7 @@ li, a {
 
     }
 }
-@media all and (max-width: 800px) {
+@media all and (max-aspect-ratio: 3/4) {
     .navigation li a{
         font-size: 7vw;
     }
