@@ -134,3 +134,15 @@ body {
         font-size: 11vw;
     }
 }
+@media all and (max-device-aspect-ratio: 3/4) {
+    .manuel-btn{
+        width: 1vh;
+        height: 1vh;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+        margin: 3vh;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+}
