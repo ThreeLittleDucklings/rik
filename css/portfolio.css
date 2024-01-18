@@ -56,7 +56,7 @@ body {
 }
 
 /* Anything udner 1024px */
-@media screen and (max-aspect-ratio: 2/3 ) {
+@media screen and (max-aspect-ratio: 3/4 ) {
     .image-grid {
         --num-cols: 2;
         --row-height: 50vw;
