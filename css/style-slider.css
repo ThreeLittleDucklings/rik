@@ -136,8 +136,8 @@ body {
 }
 @media all and (max-device-aspect-ratio: 3/4) {
     .manuel-btn{
-        width: 2vh;
-        height: 2vh;
+        width: 3vh;
+        height: 3vh;
         border: 2px solid #ffffff;
         cursor: pointer;
         margin: 4vh;
@@ -145,8 +145,8 @@ body {
         transition: 0.5s;
     }
     .navigation-auto div{
-        width: 2rem;
-        height: 2rem;
+        width: 3vh;
+        height: 3vh;
         border: 2px solid #ffffff;
         margin: 4vh;
         border-radius: 20px;
