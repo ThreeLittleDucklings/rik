@@ -132,7 +132,7 @@ body {
         font-size: 11vw;
     }
 }
-@media all and (max-device-aspect-ratio: 3/4) {
+@media all and (max-device-aspect-ratio: 1/1) {
     .manuel-btn{
         width: 3vh;
         height: 3vh;

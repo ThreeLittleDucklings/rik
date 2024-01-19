@@ -54,17 +54,40 @@ body {
 .image-grid-row-2 {
     grid-row: span 2;
 }
-
-/* Anything udner 1024px */
 @media screen and (max-aspect-ratio: 3/4 ) {
     .image-grid {
         --num-cols: 2;
         --row-height: 50vw;
     }
+}
+/* Anything udner 1024px */
+@media screen and (max-aspect-ratio: 1/1 ) {
+
     .navigation{
         display: none;
+        align-items: center;
     }
     .titel{
         margin-top:10vh;
     }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        order: -1; /* Moves the logo to the top */
+        margin-bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+
 }
