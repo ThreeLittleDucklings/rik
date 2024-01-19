@@ -80,9 +80,7 @@ body {
     border-radius: 20px;
     transition: 0.5s;
 }
-.manuel-btn:hover {
-    background-color: #ffffff;
-}
+
 #r1:checked ~ .first{
     margin-left: 0%;
 }

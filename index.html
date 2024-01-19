@@ -68,6 +68,9 @@
         // Set the first slide immediately
         document.getElementById('r' + counter).checked = true;
 
+        // Clear the interval if it's already running
+        clearInterval(intervalId);
+
         // Set up the interval for the subsequent slides
         intervalId = setInterval(function () {
             counter++;
@@ -82,6 +85,21 @@
         clearInterval(intervalId);
     }
 
+    // Function to handle manual button clicks
+    function manualButtonClick(index) {
+        // Clear the interval when a manual button is clicked
+        pauseAutoSlide();
+
+        // Set the counter to the clicked index
+        counter = index;
+
+        // Update the radio button to show the corresponding slide
+        document.getElementById('r' + counter).checked = true;
+
+        // Restart auto slide after a short delay
+        setTimeout(startAutoSlide, 4000); // You can adjust the delay as needed
+    }
+
     // Initial start
     startAutoSlide();
 
@@ -94,6 +112,15 @@
     document.querySelectorAll('.centered').forEach(function (element) {
         element.addEventListener('mouseout', startAutoSlide);
     });
+
+    // Add click event listeners to manual buttons
+    document.querySelectorAll('.manuel-btn').forEach(function (element, index) {
+        element.addEventListener('click', function () {
+            manualButtonClick(index + 1); // Adding 1 to convert from 0-based to 1-based index
+        });
+    });
+
+
 </script>
 
 </body>
