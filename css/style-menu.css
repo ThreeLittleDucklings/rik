@@ -127,6 +127,7 @@ li, a {
     }
     .logo{
         font-size: 11vw;
+        color: red;
     }
 
 }
