@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>contact</title>
-    <link rel="stylesheet" type="text/css" href="css/style-menu.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style-slider.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+  <meta charset="UTF-8">
+  <title>CodePen - Contact Form with SVG animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+
+	<link rel="stylesheet" type="text/css" href="css/style-menu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand&amp;display=swap'><link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+<header>
+	<h1 class="logo">RIK M.</h1>
+	<ul class="navigation">
+
+		<li><a href="index.html">home</a></li>
+		<li><a href="portfolio.html">portfolio</a></li>
+		<li><a href="about.html">about</a></li>
+		<li><a class="lastitem" href="contact.html">Contact</a></li>
+	</ul>
+</header>
+<!-- partial:index.partial.html -->
+<div class="container d-flex justify-content-center align-items-center">
+	
+	<!-- // SVG
+					from: https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm 
+  -------------------------------------------------------------
+  -- Note: need to use inline svg to manipulate its components
+  ------------------------------------------------------------>
+<container>
+	<div class="containerforimage "><img id="slide-2" src="images/nacht/meg6.jpg" width="1575" height="1050" alt="urban" />
+
+	</div>
+	
+	<!-- // FORM
+  -------------------------------------------------------------
+  ------------------------------------------------------------>
+	
+	<form>
+		<h1 class="title text-center mb-4">Talk to Us</h1>
+
+			<!-- Name -->
+			<div class="form-group position-relative">
+				<label for="formName" class="d-block">
+					<i class="icon" data-feather="user"></i>
+				</label>
+				<input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+			</div>
+
+			<!-- E-mail -->
+			<div class="form-group position-relative">
+				<label for="formEmail" class="d-block">
+					<i class="icon" data-feather="mail"></i>
+				</label>
+				<input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+			</div>
+
+			<!-- Message -->
+			<div class="form-group message">
+				<textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Mensagem"></textarea>
+			</div>
+		
+			<!-- Submit btn -->
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+			</div>
+	</form>
+</div>
+</container>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://unpkg.com/feather-icons'></script><script  src="./script.js"></script>
 
 </body>
 </html>
