@@ -11,29 +11,31 @@ body {
 }
 .container {
   margin-top: 20vh;
-  display: flex;
-  flex-wrap: wrap;
-  height: 50vh;
-  justify-content: space-between;
-  background-color: pink;align-items: center;
+  height: 80vh;
+  background-color: pink;
   border-radius: 2rem;
   overflow: hidden;
 }
-.containerforimage{
-    object-fit: cover;
-    transition: 2s;
-  width: 50%;
-  height: 100%;
 
+.containerforimage {
+  float: left;
+  width: 48%; /* Adjust as needed */
+  height: 100%;
+  overflow: hidden;
 }
+
 .containerforimage img {
- width: 50%;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-form {
-  min-width: 25rem;
 
+form {
+  float: right;
+  width: 48%; /* Adjust as needed */
+  min-width: 25rem;
 }
+
 form .title {
   font-family: "Pacifico", cursive;
   color: #212529;

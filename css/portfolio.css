@@ -91,3 +91,33 @@ body {
 
 
 }
+@media screen and (max-width: 800px) {
+
+    .navigation{
+        display: none;
+        align-items: center;
+    }
+    .titel{
+        margin-top:10vh;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        order: -1; /* Moves the logo to the top */
+        margin-bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+
+}
