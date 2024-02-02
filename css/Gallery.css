@@ -2,11 +2,13 @@
 ul.gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 130px;
+
     margin-left: 5vw;
     margin-right: 5vw;
 }
-
+.titel {
+    font-size: 20vw;
+}
 ul.gallery li {
     height: 45vh;
     flex-grow: 1;

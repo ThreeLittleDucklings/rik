@@ -1,14 +1,14 @@
-body {
-    background-color: #F5F2ED;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.navigation li a {
+    body {
+        background-color: #F5F2ED;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation li a {
     color: #343031;
-}
+    }
 .full-width-container {
     max-width: 800px;
     margin-left: auto;
@@ -24,6 +24,7 @@ body {
     margin-top: 100px;
 
 }
+
 .image-grid {
 
     --gap: 6vw;
@@ -41,11 +42,17 @@ body {
     gap: var(--gap);
 }
 
-.image-grid>img {
-    width: 100%;
+.image-grid>div {
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    position: relative;
+    overflow: hidden;
 }
+    .containerforimage img {
+object-fit:cover ;
+        height: 100%;
+        width: 100%;}
 
 .image-grid-col-2 {
     grid-column: span 2;
@@ -54,6 +61,25 @@ body {
 .image-grid-row-2 {
     grid-row: span 2;
 }
+
+
+
+
+.centered {
+    position: absolute;
+    font-family: regular;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust text color as needed */
+    font-size: 3rem; /* Adjust font size as needed */
+    text-align: center;
+    /* Add any additional styling you want for the text */
+}
+
+/* Media Queries for Responsive Design */
+
+
 @media screen and (max-aspect-ratio: 3/4 ) {
     .image-grid {
         --num-cols: 2;
@@ -61,37 +87,7 @@ body {
     }
 }
 /* Anything udner 1024px */
-@media screen and (max-aspect-ratio: 1/1 ) {
-
-    .navigation{
-        display: none;
-        align-items: center;
-    }
-    .titel{
-        margin-top:10vh;
-    }
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        order: -1; /* Moves the logo to the top */
-        margin-bottom: 10px; /* Adjust as needed */
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-
-
-}
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 1/1 ), (max-width: 800px) {
 
     .navigation{
         display: none;
