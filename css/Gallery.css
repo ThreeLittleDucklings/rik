@@ -18,7 +18,7 @@ ul.gallery li {
 
 ul.gallery li:last-child {
 
-flex-grow: 20;
+    flex-grow: 20;
 }
 
 img {
