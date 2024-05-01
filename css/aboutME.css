@@ -38,4 +38,49 @@ body {
     width: 50vmin;
     font-family: text;
 }
+@media screen and (max-aspect-ratio: 1/1 ), (max-width: 800px) {
+
+    .navigation{
+        display: none;
+        align-items: center;
+    }
+    .titel{
+        margin-top:10vh;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        order: -1; /* Moves the logo to the top */
+        margin-bottom: 10px; /* Adjust as needed */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #INT{
+        display: flex;
+        flex-direction: column;
+        object-position: center;
+    }
+    #text{   margin-left: 0vmin;
+        padding-top: 10vh;
+
+        width: 50vmin;
+
+    }
+    .titel{
+        padding: 0 0;
+        font-size: 16.1vw;
+        justify-content: center;
+        margin-top: 100px;
+
+    }
+}
 

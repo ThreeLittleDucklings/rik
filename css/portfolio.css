@@ -91,6 +91,13 @@ object-fit:cover ;
         --num-cols: 2;
         --row-height: 50vw;
     }
+    .image-grid-col-4 {
+        grid-column: span 2;
+    }
+
+    .image-grid-row-4 {
+        grid-row: span 2;
+    }
 }
 /* Anything udner 1024px */
 @media screen and (max-aspect-ratio: 1/1 ), (max-width: 800px) {
