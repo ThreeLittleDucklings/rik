@@ -1,0 +1,41 @@
+body {
+    background-color: #F5F2ED;
+    margin: 0;
+    padding: 0;
+
+}
+.navigation li a {
+    color: #343031;
+}
+#centerpage{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none; /* -- Prevent image highlighting -- */
+}
+.titel{
+    position: absolute;
+    left:77vh;
+    top:12vh;
+    font-family: ExtraBold;
+    font-size: 23vh;
+    color: #8C8C73;
+}
+.image{
+    width: 65vmin;
+    height: 75vmin;
+    object-fit: cover;
+
+}
+#INT{
+    display: flex;
+    object-position: center;
+}
+#text{   margin-left: 20vmin;
+    padding-top: 30vh;
+
+    width: 50vmin;
+    font-family: text;
+}
+

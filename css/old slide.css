@@ -1,5 +1,9 @@
 body {
     overflow: hidden;
+    background-color: #262626;
+}
+.navigation li a {
+    color: #343031;
 }
 .dot {
     position: fixed;
