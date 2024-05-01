@@ -10,13 +10,13 @@
 <body>
 <header>
     <h1 class="logo">RIK M.</h1>
-<ul class="navigation">
+    <ul class="navigation">
 
-    <li><a href="index.html">home</a></li>
-    <li><a href="portfolio.html">portfolio</a></li>
- <li><a href="about.html">about</a></li>
-    <li><a class="lastitem" href="contact.html">Contact</a></li>
-</ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a class="lastitem" href="contact.html">Contact</a></li>
+    </ul>
 </header>
 <section class="container">
 
@@ -26,24 +26,30 @@
             <input type="radio" name="radio-btn" id="r2">
             <input type="radio" name="radio-btn" id="r3">
             <input type="radio" name="radio-btn" id="r4">
+            <input type="radio" name="radio-btn" id="r5">
 
-            <div class="containerforimage first"><img id="slide-1" src="images/people/meg1.jpg" width="2000" height="3000" alt="people" />
-                <div class="centered" ><a href="people.html">PEOPLE</a></div>
+
+            <div class="containerforimage first"><img id="slide-1" src="images/square/_RIK7396-1.jpg" width="1333" height="1333" alt="people" />
+                <div class="centered" ><a href="portfolio.html">PEOPLE</a></div>
             </div>
-            <div class="containerforimage "><img id="slide-2" src="images/nacht/meg6.jpg" width="1575" height="1050" alt="urban" />
-                <div class="centered" ><a href="contact.html">URBAN</a></div>
+            <div class="containerforimage "><img id="slide-2" src="images/architecture/meg4.jpg" width="2559" height="2000" alt="architecture" />
+                <div class="centered" ><a href="architectuur.html">ARCHITECTURE</a></div>
             </div>
-            <div class="containerforimage "><img id="slide-3" src="images/architecture/meg4.jpg" width="2559" height="2000" alt="architecture" />
-            <div class="centered" ><a href="contact.html">ARCHITECTURE</a></div>
+            <div class="containerforimage "><img id="slide-3" src="images/square/6-Meganck-S5-Hersteld.jpg" width="2000" height="2000" alt="studio" />
+                <div class="centered" ><a href="studio.html">STUDIO</a></div>
             </div>
-            <div class="containerforimage "><img id="slide-4" src="images/Studio/meg33.jpg" width="1549" height="2419" alt="studio" />
-                <div class="centered" ><a href="contact.html">STUDIO</a></div>
+            <div class="containerforimage "><img id="slide-4" src="images/square/foto1.jpg" width="2000" height="1512" alt="studio" />
+                <div class="centered" ><a href="reportage.html">REPORTAGE</a></div>
+            </div>
+                <div class="containerforimage "><img id="slide-5" src="images/square/foto4.jpg" width="1479" height="1479" alt="studio" />
+                <div class="centered" ><a href="andere%20projecten.html">PROJECTEN</a></div>
             </div>
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
                 <div class="auto-btn3"></div>
                 <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
             </div>
 
 
@@ -53,6 +59,8 @@
             <label for="r2" class="manuel-btn"></label>
             <label for="r3" class="manuel-btn"></label>
             <label for="r4" class="manuel-btn"></label>
+            <label for="r5" class="manuel-btn"></label>
+
 
 
         </div>
@@ -61,8 +69,8 @@
 
 
 <script type="text/javascript">
-    var counter = 1;
-    var intervalId;
+    let counter = 1;
+    let intervalId;
 
     function startAutoSlide() {
         // Set the first slide immediately
@@ -74,7 +82,7 @@
         // Set up the interval for the subsequent slides
         intervalId = setInterval(function () {
             counter++;
-            if (counter > 4) {
+            if (counter > 5) {
                 counter = 1;
             }
             document.getElementById('r' + counter).checked = true;
@@ -125,4 +133,3 @@
 
 </body>
 </html>
-
