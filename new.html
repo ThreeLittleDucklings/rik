@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Gallery</title>
+    <style>
+        .gallery-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
+            height: 40vh;
+            margin: 5px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<div id="gallery-container"></div>
+
+<script>
+    // Function to create the gallery
+    // Function to create the gallery
+    function createGallery(images) {
+        var container = document.getElementById("gallery-container");
+
+        // Clear existing content
+        container.innerHTML = "";
+
+        // Set the maximum width for each row (e.g., 80% of container width)
+        var maxRowWidth = 0.8 * container.offsetWidth;
+
+        var currentRow = document.createElement("div");
+        currentRow.className = "gallery-row";
+        container.appendChild(currentRow);
+
+        images.forEach(function(imageSrc, index) {
+            // Create the image element
+            var img = document.createElement("img");
+            img.src = imageSrc;
+            img.className = "gallery-img";
+
+            // Calculate the width of the image based on its aspect ratio
+            var width = (40 * (container.offsetWidth / 100)) / (img.height / img.width);
+            img.style.width = width + "px";
+
+            // Check if adding the image would exceed the row width
+            if (currentRow.offsetWidth + width > maxRowWidth) {
+                // Create a new row
+                currentRow = document.createElement("div");
+                currentRow.className = "gallery-row";
+                container.appendChild(currentRow);
+            }
+
+            // Add the image to the current row
+            currentRow.appendChild(img);
+        });
+    }
+
+    // Example usage
+    var images = [
+        'images/people/RIK7398-1.jpg',
+        'images/people/6-Meganck-P9.jpg',
+        'images/people/RIK7396-1.jpg',
+        'images/people/6-Meganck-P9.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        'images/people/6-Meganck-P9.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        'images/people/foto2.jpg',
+        // Add more image URLs as needed
+    ];
+
+    createGallery(images);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 60vh; /* adjust this value as needed */
+    margin: 5px;
+    flex-grow: 1;
+}
