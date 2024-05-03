@@ -4,7 +4,8 @@ function positionImages() {
     const nextPercentage = parseFloat(track.dataset.percentage) || 0;
 
     for (const image of track.getElementsByClassName("image")) {
-        const imageCenter = (image.offsetLeft + image.offsetWidth / 2) / window.innerWidth * 100;
+        const imageCenter = (image.offsetLeft + image.offsetWidth / 2 + image.parentElement.offsetLeft) / window.innerWidth * 100;
+
         const centerDelta = imageCenter - 50; // Offset from the center
         let adjustedPercentage = nextPercentage + centerDelta;
         adjustedPercentage = Math.max(Math.min(adjustedPercentage, 0), -100); // Clamp within [-100, 0]
@@ -38,7 +39,8 @@ const handleOnMove = e => {
     }, { duration: 600, fill: "forwards" });
 
     for(const image of track.getElementsByClassName("image")) {
-        const imageCenter = (image.offsetLeft + image.offsetWidth / 2) / window.innerWidth * 100;
+        const imageCenter = (image.offsetLeft + image.offsetWidth / 2 + image.parentElement.offsetLeft) / window.innerWidth * 100;
+
         const centerDelta = imageCenter - 50; // Offset from the center
         let adjustedPercentage = nextPercentage + centerDelta;
         adjustedPercentage = Math.max(Math.min(adjustedPercentage, 0), -100);
@@ -62,7 +64,8 @@ const handleOnScroll = e => {
     }, { duration: 600, fill: "forwards" });
 
     for (const image of track.getElementsByClassName("image")) {
-        const imageCenter = (image.offsetLeft + image.offsetWidth / 2) / window.innerWidth * 100;
+        const imageCenter = (image.offsetLeft + image.offsetWidth / 2 + image.parentElement.offsetLeft) / window.innerWidth * 100;
+
         const centerDelta = imageCenter - 50; // Offset from the center
         let adjustedPercentage = nextPercentage + centerDelta;
         adjustedPercentage = Math.max(Math.min(adjustedPercentage, 0), -100); // Clamp within [-100, 0]

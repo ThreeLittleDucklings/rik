@@ -10,7 +10,7 @@ body {
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;
-    position: relative;
+   position: relative;
 }
 
 #image-track {
