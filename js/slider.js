@@ -54,7 +54,7 @@ const handleOnScroll = e => {
     const maxDelta = window.innerWidth / 2;
     const currentPercentage = parseFloat(track.dataset.percentage) || 0;
 
-    const nextPercentageUnconstrained = currentPercentage + (scrollDelta*0.5 / maxDelta) * 100;
+    const nextPercentageUnconstrained = currentPercentage + (scrollDelta*0.5 / maxDelta) * -100;
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
     track.dataset.percentage = nextPercentage;
