@@ -16,12 +16,18 @@
     padding-left: 72px;
     padding-right: 72px;
 }
+    input{
+        display: none;
+    }
+    .menu-icon {
+        display: none; /* Hide by default */
+    }
 .titel{
     padding: 0 0;
     font-family: slim;
     font-size: 16.1vw;
     justify-content: center;
-    margin-top: 100px;
+
 
 }
 
@@ -99,9 +105,59 @@ object-fit:cover ;
         grid-row: span 2;
     }
 }
+    @media screen and (max-aspect-ratio: 1/1) {
+
+
+        .navigation{
+            display: none;
+        }
+
+        .menu-icon {
+            display: flex;
+            cursor: pointer;
+            width: 20px;
+            padding-left: 15px;
+        }
+
+        a:hover{
+            background-color: #F5F2ED;
+        }
+
+        #menu-toggle {
+            display: none; /* Hide checkbox */
+        }
+
+        /* Styles for the dropdown menu */
+        #menu-toggle:checked + label + .navigation {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+
+            width: 100%;
+            background-color: #F5F2ED;
+            padding-bottom: 30px;
+            border-bottom: solid;
+            border-width: 1.5px;
+            transition: all 0.3s ease;
+        }
+
+        #menu-toggle:checked + label + .navigation a {
+            margin: 5px 0;
+            display: inline-flex;
+        }
+    }
 /* Anything udner 1024px */
 @media screen and (max-aspect-ratio: 1/1 ), (max-width: 800px) {
+    .titel{
+        padding: 0 0;
+        font-family: slim;
+        font-size: 16.1vw;
+        justify-content: center;
+        padding-top: 100px;
 
+
+    }
     .navigation{
         display: none;
         align-items: center;

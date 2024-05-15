@@ -245,7 +245,7 @@
         addClass: '',
         startClass: 'lg-start-zoom',
         backdropDuration: 150,
-        hideBarsDelay: 6000,
+        hideBarsDelay: 3000,
 
         useLeft: false,
 
@@ -292,7 +292,7 @@
 
         iframeMaxWidth: '100%',
 
-        download: true,
+        download: false,
         counter: true,
         appendCounterTo: '.lg-toolbar',
 
@@ -2926,7 +2926,7 @@
     };
 
     var shareSefaults = {
-        share: true,
+        share: false,
         facebook: true,
         facebookDropdownText: 'Facebook',
         twitter: true,
@@ -3064,11 +3064,11 @@
         };
     
         var rotateDefaults = {
-            rotate: true,
-            rotateLeft: true,
-            rotateRight: true,
-            flipHorizontal: true,
-            flipVertical: true
+            rotate: false,
+            rotateLeft: false,
+            rotateRight: false,
+            flipHorizontal: false,
+            flipVertical: false
         };
     
         var Rotate = function Rotate(element) {
