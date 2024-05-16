@@ -14,3 +14,4 @@ Allow: /reportage.html
 Allow: /studio.html
 Allow: /vrijwerk.html
 Disallow: /googlefaab6da423b6fc2c.html
+Sitemap: /sitemap.xml
