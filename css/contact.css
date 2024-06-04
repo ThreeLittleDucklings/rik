@@ -1,131 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background-color: #F5F2ED;
+  background: #F2F3EB;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.navigation li a {
-  color: #343031;
-}
-.container {
-  margin-top: 20vh;
-  height: 80vh;
-  background-color: pink;
-  border-radius: 2rem;
-  overflow: hidden;
 }
 
-.containerforimage {
-  float: left;
-  width: 48%; /* Adjust as needed */
-  height: 100%;
-  overflow: hidden;
+input {
+  line-height: normal;
 }
 
-.containerforimage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
 }
 
 form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.email {
   float: right;
-  width: 48%; /* Adjust as needed */
-  min-width: 25rem;
+  width: 45%;
 }
 
-form .title {
-  font-family: "Pacifico", cursive;
-  color: #212529;
-  font-size: 2.5rem;
-}
-form .form-control {
-  background-color: #f2f6f8;
-  border-radius: 2rem;
+input[type='text'], [type='email'], select, textarea {
+  background: none;
   border: none;
-  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
-}
-form .form-control.thick {
-  height: 3.3rem;
-  padding: 0.5rem 3.5rem;
-}
-form .form-control:focus {
-  background-color: #f2f6f8;
-  border: none;
-  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
-}
-form .message .form-control {
-  padding: 0.5rem 1.8rem;
-}
-form ::placeholder {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #838788;
-  position: relative;
-  left: 0;
-}
-form input,
-form textarea {
-  font-family: "Quicksand", sans-serif;
-  color: #212529;
-  font-size: 1.1rem;
-}
-form .icon {
-  color: #57565c;
-  height: 1.3rem;
-  position: absolute;
-  left: 1.5rem;
-  top: 1.1rem;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.btn.btn-primary {
-  font-family: "Quicksand", sans-serif;
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+  outline: none;
+  padding: 0 0 0.875em 0;
+}
+
+.message {
+  float: none;
+}
+
+.name {
+  float: left;
+  width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #474544;
+}
+
+:-moz-placeholder {
+  color: #474544;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #474544;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #474544;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
   font-weight: bold;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  padding: 0 3rem;
-  border: 0;
-  border-radius: 3rem;
-  background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
-  background-size: 300% 100%;
-  transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.btn.btn-primary:hover:enabled {
-  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-  background-size: 100% 100%;
-  transform: translateY(-0.15em);
+#form_button:hover {
+  background: #474544;
+  color: #F2F3EB;
 }
-@media screen and (max-aspect-ratio: 1/1 ) {
 
-  .navigation{
-    display: none;
-    align-items: center;
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
   }
-  .titel{
-    margin-top:10vh;
-  }
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
+}
 
-  .logo {
-    order: -1; /* Moves the logo to the top */
-    margin-bottom: 10px; /* Adjust as needed */
-    text-align: center;
-    margin: 0 auto;
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
   }
 
-  .navigation {
-    flex-direction: column;
-    align-items: center;
-
+  .underline {
+    width: 68px;
   }
 
+  #form_button {
+    padding: 15px 25px;
+  }
+}
 
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
 
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+
+  .underline {
+    width: 53px;
+  }
+
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
 }
