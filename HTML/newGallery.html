@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="../css/lightgallery.css"/>
+
+</head>
+<body>
+<div id="gallery"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="../js/jquery.perfectLayout.min.js"></script>
+
+<script>
+    var photos = [
+        { data: 'item1', src: '../images/architecture/vrijwerk7.jpg', ratio: 1.7 },
+        { data: 'item2', src: '../images/architecture/vrijwerk2.jpg', ratio: 1 },
+        { data: 'item1', src: '../images/architecture/vrijwerk8.jpg', ratio: 0.7 },
+        { data: 'item2', src: '../images/nacht/vrijwerk1.jpg', ratio: 1 },
+        { data: 'item1', src: '../images/nacht/vrijwerk3.jpg', ratio: 0.8 },
+        { data: 'item2', src: '../images/nacht/vrijwerk4.jpg', ratio: 2 },
+        { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
+        { data: 'item2', src: '../images/nacht/vrijwerk6.jpg', ratio: 2 },
+        { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
+        { data: 'item2', src: '../images/nacht/vrijwerk5.jpg', ratio: 2 },
+        // more items...
+    ];
+
+    $(document).ready(function() {
+        $('#gallery').perfectLayout(photos);
+
+        $(window).resize(function() {
+            $('#gallery').perfectLayout(photos);
+        });
+    });
+
+</script>
+<script src="../js/lightgallery.js"></script>
+<script>
+    lightGallery(document.getElementById('gallery'));
+
+</script>
