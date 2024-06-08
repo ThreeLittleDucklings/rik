@@ -1,42 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>vrijwerk - Rik Meganck</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mosaic.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mosaic.css" />
     <link rel="stylesheet" href="../css/lightgallery.css"/>
-
+    <link rel="stylesheet" type="text/css" href="../css/portfolio.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/Gallery.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/vrijwerk.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio van Rik Meganck, een getalenteerde jonge fotograaf uit Lier. Bekijk zijn prachtige foto's en ontdek zijn unieke stijl.">
+    <meta name="keywords" content="fotografie, portfolio, fotograaf, Rik, Meganck, Lier, artistiek">
+    <meta name="author" content="Rik Meganck">
+    <link rel="shortcut icon" href="../images/R.png"/>
 </head>
 <body>
-<div id="gallery"></div>
+<header>
+    <h1 class="logo">RIK M.</h1>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="navigation">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="../js/jquery.perfectLayout.min.js"></script>
+        <li><a href="../index.html">home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="andere%20projecten.html">projecten</a></li>
+        <li><a class="lastitem" href="about.html">about</a></li>
+    </ul>
+</header>
+<h1 class="titel">VRIJWERK</h1>
+<div class="gallery" id="gallery">
+    <div data-src="../images/architecture/vrijwerk7.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/architecture/vrijwerk7.jpg"  alt="vrijwerk">
+    </div>
+    <div data-src="../images/architecture/vrijwerk2.jpg" height="2000" width="1276">
+        <img class="thumbnail" src="../images/architecture/vrijwerk2.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/architecture/vrijwerk8.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/architecture/vrijwerk8.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk1.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/nacht/vrijwerk1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk3.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/nacht/vrijwerk3.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk4.jpg" height="2000" width="1396">
+        <img class="thumbnail" src="../images/nacht/vrijwerk4.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk6.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/nacht/vrijwerk6.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk5.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/nacht/vrijwerk5.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8434-1.jpg" height="4906" width="4000">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8434-1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8574-1.jpg" height="3932" width="5898">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8574-1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8662-1.jpg" height="5630" width="3753">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8662-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8687-1.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8687-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8828-1.jpg" height="6000" width="3903" >
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8828-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-3.jpg" height="3150" width="2100">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-3.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-5.jpg" height="3150" width="2069">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-5.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-6.jpg" height="3150" width="2100">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-6.jpg"  alt="vrijwerk" >
+    </div>
 
-<script>
-    var photos = [
-        { data: 'item1', src: '../images/architecture/vrijwerk7.jpg', ratio: 1.7 },
-        { data: 'item2', src: '../images/architecture/vrijwerk2.jpg', ratio: 1 },
-        { data: 'item1', src: '../images/architecture/vrijwerk8.jpg', ratio: 0.7 },
-        { data: 'item2', src: '../images/nacht/vrijwerk1.jpg', ratio: 1 },
-        { data: 'item1', src: '../images/nacht/vrijwerk3.jpg', ratio: 0.8 },
-        { data: 'item2', src: '../images/nacht/vrijwerk4.jpg', ratio: 2 },
-        { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
-        { data: 'item2', src: '../images/nacht/vrijwerk6.jpg', ratio: 2 },
-        { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
-        { data: 'item2', src: '../images/nacht/vrijwerk5.jpg', ratio: 2 },
-        // more items...
-    ];
+    <script>
+        $('#gallery').Mosaic({
+            maxRowHeight: 500,
+            refitOnResize: true,
+            refitOnResizeDelay: false,
+            outerMargin: 150,
+            innerGap: 50,
+            maxRowHeightPolicy: 'oversize'
 
-    $(document).ready(function() {
-        $('#gallery').perfectLayout(photos);
 
-        $(window).resize(function() {
-            $('#gallery').perfectLayout(photos);
+
+
         });
-    });
+    </script>
+</div>
 
-</script>
 <script src="../js/lightgallery.js"></script>
 <script>
     lightGallery(document.getElementById('gallery'));

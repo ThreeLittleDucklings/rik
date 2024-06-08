@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="gallery"></div>
+<script>var photos = [ { data: 'item1', src: '../images/architecture/vrijwerk7.jpg', ratio: 1.7 },
+    { data: 'item2', src: '../images/architecture/vrijwerk2.jpg', ratio: 1 },
+    { data: 'item1', src: '../images/architecture/vrijwerk8.jpg', ratio: 0.7 },
+    { data: 'item2', src: '../images/nacht/vrijwerk1.jpg', ratio: 1 },
+    { data: 'item1', src: '../images/nacht/vrijwerk3.jpg', ratio: 0.8 },
+    { data: 'item2', src: '../images/nacht/vrijwerk4.jpg', ratio: 2 },
+    { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
+    { data: 'item2', src: '../images/nacht/vrijwerk6.jpg', ratio: 2 },
+    { data: 'item1', src: '../images/nacht/vrijwerk5.jpg', ratio: 1.5 },
+    { data: 'item2', src: '../images/nacht/vrijwerk5.jpg', ratio: 2 },];
+
+
+$.fn.perfectLayout = function(photos) {
+    const node = this;
+    // Get the scrollbar width
+    var scrollDiv = document.createElement("div");
+    scrollDiv.className = "scrollbar-measure";
+    document.body.appendChild(scrollDiv);
+    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+
+    const perfectRows = perfectLayout(photos, $(this).width(), $(window).height(), {margin: 2});
+    node.empty();
+
+    perfectRows.forEach(function (row) {
+        row.forEach(function (img) {
+            var imgNode = $('<div class="image"></div>');
+            imgNode.css({
+                'width': img.width + 'px',
+                'height': img.height + 'px',
+                'background': 'url(' + img.src + ')',
+                'background-size': 'cover'
+            });
+            node.append(imgNode);
+        });
+    });
+};
+
+$(document).ready(function() {
+    var gallery = $('#gallery');
+
+    gallery.perfectLayout(photos);
+
+    $(window).resize(function() {
+        gallery.perfectLayout(photos);
+    });
+    $(window).trigger('resize');
+});
+</script>
+</body>
+</html>

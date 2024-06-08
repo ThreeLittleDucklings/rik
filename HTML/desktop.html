@@ -57,6 +57,20 @@
         </div>
     </div>
 <div class="dot"></div>
+<script>
+    // Function to redirect based on aspect ratio
+    function redirectBasedOnAspectRatio() {
+        var aspectRatio = window.innerWidth / window.innerHeight;
+        // You can adjust these thresholds based on your requirements
+        if (aspectRatio < 1/1) {
+
+            window.location.href = 'mobile.html'; // Redirect to page 2 for narrower screens
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = redirectBasedOnAspectRatio;
+</script>
 <script src="../js/slider.js"></script>
 </body>
 
