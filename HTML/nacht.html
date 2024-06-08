@@ -6,6 +6,9 @@
     <title>nachtfotografie - Rik Meganck</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
     <link rel="stylesheet" href="../css/lightgallery.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mosaic.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mosaic.css" />
     <link rel="stylesheet" type="text/css" href="../css/portfolio.css"/>
     <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
     <link rel="stylesheet" type="text/css" href="../css/Gallery.css"/>
@@ -29,35 +32,64 @@
     </ul>
 </header>
 <h1 class="titel">NACHT</h1>
-<div class="gallery" id="ancher">
-    <a data-src="images/people/RIK7398-1.jpg">
+<div class="gallery" id="gallery">
+    <div data-src="../images/people/RIK7398-1.jpg">
         <img class="thumbnail" src="../images/people/RIK7398-1.jpg" alt="A Toyota Previa covered in graffiti" loading="lazy">
-    </a>
-    <a data-src="images/people/RIK7396-1.jpg">
+    </div>
+    <div data-src="../images/people/RIK7396-1.jpg">
         <img class="thumbnail" src="../images/people/RIK7396-1.jpg" alt="Interesting living room light through a window" loading="lazy">
-    </a>
-    <a data-src="images/people/foto2.jpg">
+    </div>
+    <div data-src="../images/people/foto2.jpg">
         <img class="thumbnail" src="../images/people/foto2.jpg" alt="Sara on a red bike" loading="lazy">
-    </a>
-    <a data-src="images/people/meg1.jpg">
+    </div>
+    <a data-src="../images/people/meg1.jpg">
         <img class="thumbnail" src="../images/people/meg1.jpg" alt="Sara on a red bike" loading="lazy">
-    </a>
-    <a data-src="images/people/foto4.jpg">
+    </div>
+    <div data-src="../images/people/foto4.jpg">
         <img class="thumbnail" src="../images/people/foto4.jpg" alt="Sara on a red bike" loading="lazy">
-    </a>
-    <a data-src="images/people/foto3.jpg">
+    </div>
+    <div data-src="../images/people/foto3.jpg">
         <img class="thumbnail" src="../images/people/foto3.jpg" alt="Sara on a red bike" loading="lazy">
-    </a>
-    <a data-src="images/people/6-Meganck-P9.jpg">
+    </div>
+    <div data-src="../images/people/6-Meganck-P9.jpg">
         <img class="thumbnail" src="../images/people/6-Meganck-P9.jpg" alt="Sara on a red bike" loading="lazy">
-    </a>
+    </div>
 
-    <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
-    <a id="last" class="thumbnail" data-src="images/people/6-Meganck-P9.jpg"></a>
+    <script>
+
+        function runMosaic() {
+            $('#gallery').Mosaic({
+                maxRowHeight: 500,
+                refitOnResize: true,
+                refitOnResizeDelay: false,
+                outerMargin: 150,
+                innerGap: 50,
+                maxRowHeightPolicy: 'oversize'
+            });
+        }
+
+        // Function to check window width and run Mosaic if width is greater than 700 pixels
+        function checkWindowSize() {
+            if (window.innerWidth > 700) {
+                runMosaic();
+            }
+        }
+
+        // Event listener for resize event
+        window.addEventListener('resize', function () {
+            checkWindowSize(); // Run checkWindowSize() on resize
+        });
+
+        // Run checkWindowSize() initially when the document is ready
+        $(function () {
+            checkWindowSize();
+        });
+
+    </script>
 </div>
 <script src="../js/lightgallery.js"></script>
 <script>
-    lightGallery(document.getElementById('ancher'));
+    lightGallery(document.getElementById('gallery'));
 
 </script>
 </body>

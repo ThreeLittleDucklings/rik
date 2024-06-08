@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>vrijwerk - Rik Meganck</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mosaic.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mosaic.css" />
     <link rel="stylesheet" href="../css/lightgallery.css"/>
     <link rel="stylesheet" type="text/css" href="../css/portfolio.css"/>
     <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
@@ -30,63 +33,91 @@
     </ul>
 </header>
 <h1 class="titel">VRIJWERK</h1>
-<div class="gallery" id="ancher">
-    <a data-src="../images/architecture/vrijwerk7.jpg">
-        <img class="thumbnail" src="../images/architecture/vrijwerk7.jpg" alt="vrijwerk">
-    </a>
-    <a data-src="../images/architecture/vrijwerk2.jpg">
+<div class="gallery" id="gallery">
+    <div data-src="../images/architecture/vrijwerk7.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/architecture/vrijwerk7.jpg"  alt="vrijwerk">
+    </div>
+    <div data-src="../images/architecture/vrijwerk2.jpg" height="2000" width="1276">
         <img class="thumbnail" src="../images/architecture/vrijwerk2.jpg" alt="vrijwerk" >
-    </a>
-    <a data-src="../images/architecture/vrijwerk8.jpg">
-        <img class="thumbnail" src="../images/architecture/vrijwerk8.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/nacht/vrijwerk1.jpg">
-        <img class="thumbnail" src="../images/nacht/vrijwerk1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/nacht/vrijwerk3.jpg">
-        <img class="thumbnail" src="../images/nacht/vrijwerk3.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/nacht/vrijwerk4.jpg">
-        <img class="thumbnail" src="../images/nacht/vrijwerk4.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/nacht/vrijwerk6.jpg">
-        <img class="thumbnail" src="../images/nacht/vrijwerk6.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/nacht/vrijwerk5.jpg">
-        <img class="thumbnail" src="../images/nacht/vrijwerk5.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/_RIK8434-1.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/_RIK8434-1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/_RIK8574-1.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/_RIK8574-1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/_RIK8662-1.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/_RIK8662-1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/_RIK8687-1.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/_RIK8687-1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/_RIK8828-1.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/_RIK8828-1.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/6-Meganck-vw2-3.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-3.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/6-Meganck-vw2-5.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-5.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <a data-src="../images/vrijwerk2/6-Meganck-vw2-6.jpg">
-        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-6.jpg" alt="vrijwerk" loading="lazy">
-    </a>
-    <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
-    <a id="last" class="thumbnail" data-src="images/people/6-Meganck-P9.jpg"></a>
+    </div>
+    <div data-src="../images/architecture/vrijwerk8.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/architecture/vrijwerk8.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk1.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/nacht/vrijwerk1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk3.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/nacht/vrijwerk3.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk4.jpg" height="2000" width="1396">
+        <img class="thumbnail" src="../images/nacht/vrijwerk4.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk6.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/nacht/vrijwerk6.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/nacht/vrijwerk5.jpg" height="1333" width="2000">
+        <img class="thumbnail" src="../images/nacht/vrijwerk5.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8434-1.jpg" height="4906" width="4000">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8434-1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8574-1.jpg" height="3932" width="5898">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8574-1.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8662-1.jpg" height="5630" width="3753">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8662-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8687-1.jpg" height="2000" width="1333">
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8687-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/_RIK8828-1.jpg" height="6000" width="3903" >
+        <img class="thumbnail" src="../images/vrijwerk2/_RIK8828-1.jpg" alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-3.jpg" height="3150" width="2100">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-3.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-5.jpg" height="3150" width="2069">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-5.jpg"  alt="vrijwerk" >
+    </div>
+    <div data-src="../images/vrijwerk2/6-Meganck-vw2-6.jpg" height="3150" width="2100">
+        <img class="thumbnail" src="../images/vrijwerk2/6-Meganck-vw2-6.jpg"  alt="vrijwerk" >
+    </div>
+
+    <script>
+
+        function runMosaic() {
+            $('#gallery').Mosaic({
+                maxRowHeight: 500,
+                refitOnResize: true,
+                refitOnResizeDelay: false,
+                outerMargin: 150,
+                innerGap: 50,
+                maxRowHeightPolicy: 'oversize'
+            });
+        }
+
+        // Function to check window width and run Mosaic if width is greater than 700 pixels
+        function checkWindowSize() {
+            if (window.innerWidth > 700) {
+                runMosaic();
+            }
+        }
+
+        // Event listener for resize event
+        window.addEventListener('resize', function () {
+            checkWindowSize(); // Run checkWindowSize() on resize
+        });
+
+        // Run checkWindowSize() initially when the document is ready
+        $(function () {
+            checkWindowSize();
+        });
+
+    </script>
 </div>
+
 <script src="../js/lightgallery.js"></script>
 <script>
-    lightGallery(document.getElementById('ancher'));
+    lightGallery(document.getElementById('gallery'));
 
 </script>
-
-</body>
-</html>
