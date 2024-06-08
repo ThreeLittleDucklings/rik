@@ -84,18 +84,35 @@
     </div>
 
     <script>
-        $('#gallery').Mosaic({
-            maxRowHeight: 500,
-            refitOnResize: true,
-            refitOnResizeDelay: false,
-            outerMargin: 150,
-            innerGap: 50,
-            maxRowHeightPolicy: 'oversize'
 
+        function runMosaic() {
+            $('#gallery').Mosaic({
+                maxRowHeight: 500,
+                refitOnResize: true,
+                refitOnResizeDelay: false,
+                outerMargin: 150,
+                innerGap: 50,
+                maxRowHeightPolicy: 'oversize'
+            });
+        }
 
+        // Function to check window width and run Mosaic if width is greater than 700 pixels
+        function checkWindowSize() {
+            if (window.innerWidth > 700) {
+                runMosaic();
+            }
+        }
 
-
+        // Event listener for resize event
+        window.addEventListener('resize', function () {
+            checkWindowSize(); // Run checkWindowSize() on resize
         });
+
+        // Run checkWindowSize() initially when the document is ready
+        $(function () {
+            checkWindowSize();
+        });
+
     </script>
 </div>
 
