@@ -71,6 +71,7 @@ li, a {
 
     }
 
+
     .navigation {
         display: flex;
         flex-direction: column;
@@ -171,7 +172,7 @@ body {
     --gap: 6vw;
     --num-cols: 4;
     --row-height: 22vw;
-
+width: 100vw;
     box-sizing: border-box;
     padding-bottom:  var(--gap);
     padding-left:  var(--gap);
@@ -180,6 +181,7 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
+
     gap: var(--gap);
 }
 

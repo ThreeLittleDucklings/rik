@@ -241,6 +241,9 @@ body {
 #r6:checked ~ .first{
     margin-left: -500%;
 }
+#r7:checked ~ .first{
+    margin-left: -600%;
+}
 .navigation-auto{
     display: flex;
     column-gap: 1rem;
@@ -277,6 +280,9 @@ body {
     background: #ffffff;
 }
 #r5:checked ~ .navigation-auto .auto-btn4{
+    background: #ffffff;
+}
+#r6:checked ~ .navigation-auto .auto-btn4{
     background: #ffffff;
 }
 #r6:checked ~ .navigation-auto .auto-btn4{
