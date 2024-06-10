@@ -39,6 +39,6 @@ body {
     transform: translate(-50%, -50%); /* -- Center div exactly -- */
     font-family: regular;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 3vw;
     left: 50%;
 }
